@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.4.0//EN" "http://google-web-toolkit.googlecode.com/svn/tags/2.4.0/distro-source/core/src/gwt-module.dtd">
+<module rename-to="TestModule">
+	<!-- inheritance part declarations -->
+	<inherits name="com.google.gwt.user.User" />
+	<inherits name='com.google.gwt.activity.Activity'/>
+  	<inherits name='com.google.gwt.place.Place'/>
+  	<inherits name='com.google.web.bindery.requestfactory.RequestFactory' />
+  		
+	<!-- source paths -->
+	<source path="client" />
+	<source path="shared" />
+	<source path="server" />
+	
+	<!-- Use ClientFactoryImpl by default -->
+    <replace-with class="com.toto.test.client.clientfactory.ClientFactoryImpl">
+    	<when-type-is class="com.toto.test.client.clientfactory.ClientFactory"/>
+    </replace-with>
+    
+	<!-- entry point -->
+	<entry-point class="com.toto.test.client.TestModule" />
+	 
+</module>
